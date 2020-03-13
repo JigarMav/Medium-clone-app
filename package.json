@@ -1,0 +1,23 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "My First project in nodejs!!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JigarMav/Medium-clone-app.git"
+  },
+  "author": "Jigar Mav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JigarMav/Medium-clone-app/issues"
+  },
+  "homepage": "https://github.com/JigarMav/Medium-clone-app#readme",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
