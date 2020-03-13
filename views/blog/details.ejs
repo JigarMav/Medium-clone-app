@@ -1,0 +1,31 @@
+<%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/home.css">
+
+</head>
+<body>
+  <%-include('../includes/navigation.ejs')%>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="/">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">/</a>
+                <small class="text-muted">ascsc</small>
+                <!-- {% if object.author == user %}
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+                </div>
+                {% endif %} -->
+            </div>
+            <h2 class="article-title">title</h2>
+            <p class="article-content">body</p>
+            </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+<%- include('../includes/footer.ejs')%>

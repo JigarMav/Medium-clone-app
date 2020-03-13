@@ -1,0 +1,36 @@
+<%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/home.css">
+
+</head>
+<body>
+  <%-include('../includes/navigation.ejs')%>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <!-- {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %} -->
+          <!-- {% block content %} -->
+          <article class="media content-section">
+          <img class="rounded-circle article-img" src="/">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">BY JIgar Mav</a>
+              <small class="text-muted">date of the article</small>
+              <small class="text-muted">10 mins</small>
+            </div>
+            <h2><a class="article-title" href="/details">this is title</a></h2>
+            <p class="article-content">body of the article is present here</p>
+          </div>
+        </article>
+
+        </div>
+        <%-include('../includes/sidebar.ejs')%>
+      </div>
+    </main>
+
+<%- include('../includes/footer.ejs')%>
