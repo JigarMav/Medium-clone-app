@@ -24,6 +24,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.4",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "slugify": "^1.4.0",
+    "validator": "^12.2.0"
   }
 }

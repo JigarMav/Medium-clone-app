@@ -15,19 +15,26 @@
             {% endfor %}
           {% endif %} -->
           <!-- {% block content %} -->
-          <article class="media content-section">
-          <img class="rounded-circle article-img" src="/">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">BY JIgar Mav</a>
-              <small class="text-muted">date of the article</small>
-              <small class="text-muted">10 mins</small>
+          <% if (posts.length <= 0) { %>
+            <h1>Nothing there!</h1>
+        <% } else { %>
+          <% posts.forEach(post=>{ %>
+            <article class="media content-section">
+            <img class="rounded-circle article-img" src=<%=post.image%>>
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">BY JIgar Mav</a>
+                <small class="text-muted"><%=post.date.toDateString()%></small>
+                <small class="text-muted">10 mins</small>
+              </div>
+              <img src=https://picsum.photos/seed/picsum/200/300>
+              <h2><a class="article-title" href="/details"><%=post.title%></a></h2>
+              <p class="article-content"><%=post.content%></p>
             </div>
-            <h2><a class="article-title" href="/details">this is title</a></h2>
-            <p class="article-content">body of the article is present here</p>
-          </div>
-        </article>
+          </article>
+          <%})%>
 
+          <%}%>
         </div>
         <%-include('../includes/sidebar.ejs')%>
       </div>

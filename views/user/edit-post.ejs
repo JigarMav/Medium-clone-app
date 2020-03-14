@@ -6,28 +6,34 @@
   <%-include('../includes/navigation.ejs')%>
 <main>
     <!-- if editing then post on /edit-product else /add-product -->
-    <form class="product-form" action="/" method="POST">
+    <form class="product-form" action="/user/add-post" method="POST">
         <div class="form-control">
             <label for="title">Title</label>
-            <input type="text" name="title" id="title" value="">
+            <input type="text" name="title" id="title" >
         </div>
         <div class="form-control">
-            <label for="imageUrl">Image URL</label>
-            <input type="text" name="imageUrl" id="imageUrl" value="">
+            <label for="image">Image URL</label>
+            <input type="text" name="image" id="image" >
         </div>
         <div class="form-control">
-            <label for="price">Price</label>
-            <input type="number" name="price" id="price" step="0.01" value="">
+            <label for="date">date</label>
+            <input type="date" name="date" id="date">
         </div>
         <div class="form-control">
-            <label for="description">Description</label>
-            <textarea name="description" id="description" rows="5"></textarea>
+            <label for="content">content</label>
+            <textarea name="content" id="content" rows="5"></textarea>
         </div>
-
+        <div class="form-control">
+            <label for="hidden">hidden</label>
+            <input type="radio" id="true" name="hidden" value="true">
+            <label for="true">true</label><br>
+            <input type="radio" id="false" name="hidden" value="false">
+            <label for="false">false</label><br>
+        </div>
 
         <button class="btn" type="submit">submit</button>
         <!-- if (editing) { 
-            <input type="hidden" name="productId" value=""> -->
+            <input type="hidden" name="productId" > -->
     </form>
 </main>
 <%- include('../includes/footer.ejs')%>

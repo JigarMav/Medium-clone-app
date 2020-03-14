@@ -1,10 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../models/post')
+const User = require('../models/user')
 
-router.get('/',(req,res)=>{
-    res.render('blog/index',{
 
-    });
+router.get('/',async (req,res)=>{
+    try {
+        const posts = await Post.find();
+        res.render('blog/index',{
+            posts:posts
+        });
+    } catch (error) {
+        console.log(error);
+        
+    }
 });
 router.get('/details',(req,res)=>{
     res.render('blog/details.ejs');
